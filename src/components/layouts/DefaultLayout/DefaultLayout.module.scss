@@ -1,0 +1,18 @@
+.wrapper {
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 1150px;
+    min-height: 1000px;
+    background-color: aquamarine;
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    min-height: 1000px;
+    background-color: aquamarine;
+}
