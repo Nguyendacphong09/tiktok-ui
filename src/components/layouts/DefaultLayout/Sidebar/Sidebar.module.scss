@@ -1,5 +1,4 @@
 .wrapper {
-    background-color: antiquewhite;
-    width: 356px;
-    min-height: 1000px;
+    width: var(--default-layout-sidebar-width);
+    min-height: var(--default-layout-min-hight);
 }

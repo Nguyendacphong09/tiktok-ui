@@ -1,0 +1,29 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 9px 16px;
+}
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 12px;
+}
+.info {
+    flex: 1;
+    align-items: center;
+}
+.name-account {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.check-icon {
+    color: rgb(32, 213, 236);
+    padding-left: 4px;
+}
+.title-account {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.4rem;
+}
