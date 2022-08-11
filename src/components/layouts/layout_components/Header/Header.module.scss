@@ -4,11 +4,16 @@
     --top-spacer: 8px;
     --search-button-width-right: 52px;
 
-    height: var(--default-layout-header-hight, 60px);
-    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
     display: flex;
     justify-content: center;
     width: 100%;
+    height: var(--default-layout-header-hight, 60px);
+    background-color: var(--white);
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
 }
 
 .inner {
@@ -19,7 +24,12 @@
     justify-content: space-between;
     padding: 0 var(--default-layout-h-spacer);
 }
-
+.short {
+    width: var(--default-layout-content-width);
+}
+.long {
+    width: 100%;
+}
 .logo {
     display: flex;
     cursor: pointer;
@@ -31,35 +41,18 @@
     height: 100%;
     align-items: center;
 }
-.up-load-btn {
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.plus-icon {
-    margin-right: 8px;
-    font-size: 1.6rem;
-}
-.up-load-text {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #161823;
-    text-align: center;
-}
+
 .sign-in-btn {
     border-radius: 4px;
     margin-left: 16px;
 }
 .more-btn {
     cursor: pointer;
-    font-size: 2rem;
     margin-left: 16px;
     padding: 0 4px;
     color: rgba(22, 24, 35, 1);
-    height: 100%;
     background-color: transparent;
+    line-height: 50%;
 }
 
 .avatar-user {
@@ -72,10 +65,13 @@
 }
 
 .actions-icon-login {
-    //font-size: 2.2rem;
     background-color: transparent;
     color: #161823;
-    padding: 4px 10px;
+    padding: 6px 6px 0;
+    min-width: auto;
     cursor: pointer;
     text-align: center;
+    margin-left: 12px;
+    margin-right: 0;
+    border: none;
 }

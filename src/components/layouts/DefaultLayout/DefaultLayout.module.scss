@@ -15,6 +15,7 @@
     min-height: var(--default-layout-min-hight);
     justify-content: center;
     align-items: center;
+    margin-top: var(--default-layout-header-hight);
 }
 .main-content {
     display: flex;

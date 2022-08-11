@@ -1,29 +1,22 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faPlus,
-    faEllipsisVertical,
-    faEarthAsia,
-    faKeyboard,
-    faUser,
-    faBitcoinSign,
-    faGear,
-    faSignOut,
-} from '@fortawesome/free-solid-svg-icons';
+import { faEarthAsia, faKeyboard, faUser, faBitcoinSign, faGear, faSignOut } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons';
 
+import routesConfig from '~/config/routes';
 import Button from '~/components/Button';
 import styles from '../Header/Header.module.scss';
 import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
-import { InboxIcon, MessageIcon } from '~/components/Icons';
+import { EllipsisVIcon, InboxIcon, MessageIcon, PlusIcon } from '~/components/Icons';
 import Image from '~/components/Images';
 import SearchInput from '../Search';
+import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
-function Header() {
+function Header({ short, long }) {
     // user fake
     const currentUser = true;
     //Menu data
@@ -87,30 +80,29 @@ function Header() {
         console.log(MenuItem);
     };
     //
-
+    const classes = cx('inner', { short, long });
     return (
         <header className={cx('wrapper')}>
-            <div className={cx('inner')}>
-                <div className={cx('logo')}>
-                    <img src={images.logoTiktok} alt="tik-tok-logo" />
-                </div>
+            <div className={classes}>
+                <Link to={routesConfig.home}>
+                    <div className={cx('logo')}>
+                        <img src={images.logoTiktok} alt="tik-tok-logo" />
+                    </div>
+                </Link>
 
                 <SearchInput />
                 <div className={cx('actions')}>
-                    <Button medium>
-                        <div className={cx('up-load-btn')}>
-                            <span className={cx('plus-icon')}>
-                                <FontAwesomeIcon icon={faPlus} />
-                            </span>
-                            <div className={cx('up-load-text')}>Upload</div>
-                        </div>
-                    </Button>
+                    <Link to={routesConfig.upload}>
+                        <Button medium leftIcon={<PlusIcon />} text="Upload"></Button>
+                    </Link>
                     {currentUser ? (
                         <>
                             <Tippy content="Messages" placement="bottom">
-                                <button className={cx('actions-icon-login')}>
-                                    <MessageIcon />
-                                </button>
+                                <Link to={routesConfig.message}>
+                                    <button className={cx('actions-icon-login')}>
+                                        <MessageIcon />
+                                    </button>
+                                </Link>
                             </Tippy>
                             <Tippy content="Inbox" placement="bottom">
                                 <button className={cx('actions-icon-login')}>
@@ -121,7 +113,7 @@ function Header() {
                     ) : (
                         <>
                             <div className={cx('sign-in-btn')}>
-                                <Button primary>Log in</Button>
+                                <Button primary text="Log in"></Button>
                             </div>
                         </>
                     )}
@@ -134,7 +126,7 @@ function Header() {
                             />
                         ) : (
                             <button className={cx('more-btn')}>
-                                <FontAwesomeIcon icon={faEllipsisVertical} />
+                                <EllipsisVIcon />
                             </button>
                         )}
                     </Menu>

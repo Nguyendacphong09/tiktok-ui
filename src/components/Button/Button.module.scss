@@ -6,14 +6,20 @@
     padding: 0 16px;
     font-size: 1.6rem;
     font-weight: 600;
-    font-family: 'ProximaNova', sans-serif;
     cursor: pointer;
     background-color: var(--white);
     margin-right: 6px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family);
 }
 .primary {
     background-color: var(--primary);
     color: var(--white);
+    font-weight: 700;
+    border-radius: 4px;
+    min-width: 100px;
+    justify-content: center;
     &:hover {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
     }
@@ -45,10 +51,14 @@
 }
 // button has icon
 .left-icon {
-    padding-right: 14px;
+    margin-right: 8px;
+    text-align: center;
+    display: inline-block;
+    width: 20px;
+}
+.text-button {
     text-align: center;
 }
-
 // button size
 .small {
     min-width: 88px;

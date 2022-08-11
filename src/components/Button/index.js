@@ -11,6 +11,7 @@ function Button({
     outline = false,
     medium = false,
     rounded = false,
+    text = '',
     leftIcon,
     small,
     large,
@@ -22,6 +23,7 @@ function Button({
         primary,
         outline,
         medium,
+        text,
         leftIcon,
         [className]: className,
         rounded,
@@ -39,6 +41,7 @@ function Button({
     return (
         <Comp className={classes} {...props}>
             {leftIcon && <span className={cx('left-icon')}>{leftIcon}</span>}
+            {text && <span className={cx('text-button')}>{text}</span>}
             <span>{children}</span>
         </Comp>
     );
