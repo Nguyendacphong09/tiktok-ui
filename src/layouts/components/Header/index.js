@@ -5,7 +5,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons';
 
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import Button from '~/components/Button';
 import styles from '../Header/Header.module.scss';
 import images from '~/assets/images';
@@ -84,7 +84,7 @@ function Header({ short, long }) {
     return (
         <header className={cx('wrapper')}>
             <div className={classes}>
-                <Link to={routesConfig.home}>
+                <Link to={config.routes.home}>
                     <div className={cx('logo')}>
                         <img src={images.logoTiktok} alt="tik-tok-logo" />
                     </div>
@@ -92,13 +92,13 @@ function Header({ short, long }) {
 
                 <SearchInput />
                 <div className={cx('actions')}>
-                    <Link to={routesConfig.upload}>
-                        <Button medium leftIcon={<PlusIcon />} text="Upload"></Button>
+                    <Link to={config.routes.upload}>
+                        <Button medium leftIcon={<PlusIcon />} text="Upload" />
                     </Link>
                     {currentUser ? (
                         <>
                             <Tippy content="Messages" placement="bottom">
-                                <Link to={routesConfig.message}>
+                                <Link to={config.routes.message}>
                                     <button className={cx('actions-icon-login')}>
                                         <MessageIcon />
                                     </button>
@@ -113,7 +113,7 @@ function Header({ short, long }) {
                     ) : (
                         <>
                             <div className={cx('sign-in-btn')}>
-                                <Button primary text="Log in"></Button>
+                                <Button primary text="Log in" />
                             </div>
                         </>
                     )}

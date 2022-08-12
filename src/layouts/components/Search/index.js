@@ -6,12 +6,12 @@ import styles from './Search.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchService';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import { useDebounce } from '~/hooks';
 import { SearchIcon } from '~/components/Icons';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 function SearchInput() {
@@ -94,7 +94,7 @@ function SearchInput() {
                     )}
 
                     {Loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-                    <Link to={routesConfig.search}>
+                    <Link to={config.routes.search}>
                         <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                             {<SearchIcon />}
                         </button>
