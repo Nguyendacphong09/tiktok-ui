@@ -1,0 +1,62 @@
+.wrapper {
+    width: 320px;
+    padding: 20px;
+    margin-top: -8px;
+}
+.header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding-bottom: 12px;
+}
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 4.4rem;
+    height: 4.4rem;
+    cursor: pointer;
+}
+.follow-btn {
+    position: absolute;
+    right: 0;
+}
+.check-icon {
+    color: rgb(32, 213, 236);
+    padding-left: 4px;
+    font-size: 1.4rem;
+}
+.link-profile {
+    a[href] {
+        font-family: var(--font-SofiaPro);
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 22px;
+        padding-bottom: 6px;
+    }
+}
+.name-account {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    color: var(--black);
+}
+.interactive {
+    width: 100%;
+    display: flex;
+    margin-top: 8px;
+    align-items: center;
+}
+.amount {
+    font-weight: 700;
+    margin-right: 6px;
+    font-size: 1.7rem;
+    line-height: 20px;
+}
+.interactive-type {
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 1.7rem;
+    line-height: 20px;
+    margin-right: 12px;
+}

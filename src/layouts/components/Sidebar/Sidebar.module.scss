@@ -1,4 +1,10 @@
 .wrapper {
     width: var(--default-layout-sidebar-width);
     min-height: var(--default-layout-min-hight);
+    padding: 20px 0 26px 8px;
+    margin-left: -18px;
+}
+
+.discover-menu {
+    padding-top: 8px;
 }

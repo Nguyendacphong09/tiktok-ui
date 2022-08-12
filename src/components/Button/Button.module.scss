@@ -41,9 +41,9 @@
 }
 .rounded {
     border-radius: 999px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    //box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
     border-color: rgba(22, 24, 35, 0.12);
-
+    max-width: 100%;
     &:hover {
         border-color: rgba(22, 24, 35, 0.2);
         background-color: rgba(22, 24, 35, 0.03);
@@ -58,6 +58,9 @@
 }
 .text-button {
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 // button size
 .small {
@@ -68,4 +71,18 @@
 .large {
     padding: 14px 16px;
     min-width: 140px;
+}
+
+//sidebar button custom
+.sidebarBtn {
+    margin-bottom: 12px;
+    height: 24px;
+    border-radius: 4px;
+    transition: background-color 200ms ease-in-out 0s;
+    .text-button {
+        color: rgba(22, 24, 35, 0.75);
+        font-weight: 400;
+        font-family: 'IBM Plex Sans', Arial, sans-serif;
+        font-size: 1.4rem;
+    }
 }

@@ -7,6 +7,7 @@ import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 import Messages from '~/pages/Messages';
+import Live from '~/pages/Live';
 //public routes
 const publicRoutes = [
     {
@@ -34,6 +35,10 @@ const publicRoutes = [
     {
         path: config.routes.message,
         component: Messages,
+    },
+    {
+        path: config.routes.live,
+        component: Live,
     },
 ];
 

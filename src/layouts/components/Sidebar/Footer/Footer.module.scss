@@ -1,0 +1,21 @@
+.wrapper {
+    padding-top: 8px;
+    padding-left: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    a[href] {
+        padding-right: 6px;
+        margin-top: 13px;
+        color: rgba(22, 24, 35, 0.5);
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.inline-link {
+    padding: 8px 0;
+}
+.footer-describe {
+    color: rgba(22, 24, 35, 0.5);
+    margin-top: 14px;
+}

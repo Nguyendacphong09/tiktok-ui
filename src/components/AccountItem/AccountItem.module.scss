@@ -27,3 +27,23 @@
     color: rgba(22, 24, 35, 0.5);
     font-size: 1.4rem;
 }
+
+// Account Item for Side bar
+.forSidebar {
+    padding: 8px;
+    height: 48px;
+    margin-bottom: 4px;
+    .avatar {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    .name-account {
+        font-family: var(--font-SofiaPro);
+        font-weight: 700;
+    }
+    .title-account {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: rgba(22, 24, 35, 0.75);
+    }
+}

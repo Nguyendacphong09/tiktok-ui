@@ -9,7 +9,7 @@
     justify-content: center;
 }
 .container {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     width: var(--default-layout-content-width);
     min-height: var(--default-layout-min-hight);
