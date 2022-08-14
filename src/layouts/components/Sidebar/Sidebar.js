@@ -15,32 +15,50 @@ import DiscoverMenu from './Menu/DiscoverMenu/DiscoverMenu';
 import Footer from './Footer';
 
 const cx = classNames.bind(styles);
+
 function Sidebar() {
     return (
-        <aside className={cx('wrapper')}>
-            <Menu>
-                <MenuItem to={routesConfig.home} title="For me" icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
-                <MenuItem
-                    to={routesConfig.following}
-                    title="Following"
-                    icon={<FollowingIcon />}
-                    activeIcon={<FollowingActiveIcon />}
-                />
-                <MenuItem to={routesConfig.live} title="LIVE" icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
-            </Menu>
-            <WrapperInSideBar title="Suggested accounts">
-                <MenuUser textButton="See all" />
-            </WrapperInSideBar>
-            <WrapperInSideBar title="Following accounts">
-                <MenuUser textButton="See more" following={true} />
-            </WrapperInSideBar>
-            <WrapperInSideBar title="Discover">
-                <div className={cx('discover-menu')}>
-                    <DiscoverMenu />
+        <div className={cx('wrapper')}>
+            <aside>
+                <div className={cx('content')}>
+                    <Menu>
+                        <MenuItem
+                            to={routesConfig.home}
+                            title="For me"
+                            icon={<HomeIcon />}
+                            activeIcon={<HomeActiveIcon />}
+                        />
+                        <MenuItem
+                            to={routesConfig.following}
+                            title="Following"
+                            icon={<FollowingIcon />}
+                            activeIcon={<FollowingActiveIcon />}
+                        />
+                        <MenuItem
+                            to={routesConfig.live}
+                            title="LIVE"
+                            icon={<LiveIcon />}
+                            activeIcon={<LiveActiveIcon />}
+                        />
+                    </Menu>
+                    <WrapperInSideBar title="Suggested accounts">
+                        <MenuUser textButton="See all" />
+                    </WrapperInSideBar>
+                    <WrapperInSideBar title="Following accounts">
+                        <MenuUser textButton="See more" following={true} />
+                    </WrapperInSideBar>
+                    <WrapperInSideBar title="Discover">
+                        <div className={cx('discover-menu')}>
+                            <DiscoverMenu />
+                        </div>
+                    </WrapperInSideBar>
+                    <Footer />
                 </div>
-            </WrapperInSideBar>
-            <Footer />
-        </aside>
+                <div className={cx('scroll-bar')}>
+                    <div className={cx('scroll-shape')}></div>
+                </div>
+            </aside>
+        </div>
     );
 }
 

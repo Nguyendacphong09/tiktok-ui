@@ -13,7 +13,7 @@ import Menu from '~/components/Popper/Menu';
 import { EllipsisVIcon, InboxIcon, MessageIcon, PlusIcon } from '~/components/Icons';
 import Image from '~/components/Images';
 import SearchInput from '~/layouts/components/Search';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 function Header({ short, long }) {
@@ -84,25 +84,25 @@ function Header({ short, long }) {
     return (
         <header className={cx('wrapper')}>
             <div className={classes}>
-                <Link to={config.routes.home}>
+                <NavLink to={config.routes.home}>
                     <div className={cx('logo')}>
                         <img src={images.logoTiktok} alt="tik-tok-logo" />
                     </div>
-                </Link>
+                </NavLink>
 
                 <SearchInput />
                 <div className={cx('actions')}>
-                    <Link to={config.routes.upload}>
+                    <NavLink to={config.routes.upload}>
                         <Button medium leftIcon={<PlusIcon />} text="Upload" />
-                    </Link>
+                    </NavLink>
                     {currentUser ? (
                         <>
                             <Tippy content="Messages" placement="bottom">
-                                <Link to={config.routes.message}>
+                                <NavLink to={config.routes.message}>
                                     <button className={cx('actions-icon-login')}>
                                         <MessageIcon />
                                     </button>
-                                </Link>
+                                </NavLink>
                             </Tippy>
                             <Tippy content="Inbox" placement="bottom">
                                 <button className={cx('actions-icon-login')}>
@@ -121,7 +121,7 @@ function Header({ short, long }) {
                         {currentUser ? (
                             <Image
                                 className={cx('avatar-user')}
-                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/a79acb62b201b6eaf1e21e36c5d16a02.jpeg?x-expires=1660474800&x-signature=8C4zB9douWeIxji0MVMm4G9gWrU%3D"
+                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/f75993e97bd5424690cb3c702fc88b0d~c5_100x100.jpeg?x-expires=1660579200&x-signature=%2FG40h79kTMHoHBgK9gmdV44Eqjo%3D"
                                 alt="harasii"
                             />
                         ) : (

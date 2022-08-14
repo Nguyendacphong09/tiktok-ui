@@ -12,7 +12,7 @@ export const search = async (q, type = 'less') => {
         console.log(error);
     }
 };
-export const getUsers = async (q = 'i', type = 'less') => {
+export const getUsers = async (q = 'n', type = 'less') => {
     try {
         const res = await httpRequest.get('users/search', {
             params: {

@@ -35,7 +35,7 @@ function MenuUser({ textButton, following = false }) {
     return (
         <Menu>
             {Users.map((user, index) => (
-                <PopperAccount key={index} data={user}>
+                <PopperAccount key={index} data={user} disabled={following}>
                     <div className={cx('user')} key={index}>
                         <AccountItem data={user} forSidebar={true} />
                     </div>

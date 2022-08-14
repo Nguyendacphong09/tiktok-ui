@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
@@ -94,11 +94,9 @@ function SearchInput() {
                     )}
 
                     {Loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-                    <Link to={config.routes.search}>
-                        <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
-                            {<SearchIcon />}
-                        </button>
-                    </Link>
+                    <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
+                        <NavLink to={config.routes.search}>{<SearchIcon className={cx('search-icon')} />}</NavLink>
+                    </button>
                 </div>
             </HeadlessTippy>
         </div>

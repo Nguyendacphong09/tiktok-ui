@@ -1,0 +1,113 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    margin-left: 65px;
+    border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+    padding: 20px;
+    padding-right: 80px;
+    position: relative;
+    flex-direction: column;
+}
+.header-content {
+    display: flex;
+    position: relative;
+}
+.info-popper {
+    display: flex;
+    flex: 1;
+    &:hover .full-name {
+        text-decoration: underline;
+    }
+}
+
+.following-btn {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    width: 88px;
+    height: 28px;
+    position: absolute;
+    right: 0;
+}
+.avatar {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.name {
+    display: flex;
+    height: max-content;
+    align-items: center;
+    padding-left: 8px;
+}
+.full-name {
+    font-family: 'IBM Plex Sans', Arial, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 25px;
+    margin-right: 4px;
+}
+.nick-name {
+    font-family: 'IBM Plex Sans', Arial, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 28px;
+    cursor: pointer;
+}
+.title-video {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    left: 8px;
+}
+.video-content {
+    padding-left: 56px;
+}
+.title {
+    font-weight: 400;
+    padding-right: 4px;
+    padding-left: 56px;
+}
+.hag-tags {
+    font-weight: 600;
+}
+.music-title {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+.link-music {
+    font-weight: 600;
+}
+.wrapper-video {
+    position: relative;
+    width: max-content;
+}
+.video {
+    height: calc(450px + (100vw - 768px) / 1152 * 100);
+    border-radius: 8px;
+}
+.sound-control {
+    position: absolute;
+    left: 16px;
+    bottom: 26px;
+}
+.video-control {
+    position: absolute;
+    right: 12px;
+    bottom: 26px;
+}
+.interactive-btn {
+    position: absolute;
+    right: 0;
+}
+
+.btn-off {
+    display: none;
+}
+.btn-on {
+}
